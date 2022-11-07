@@ -14,6 +14,7 @@ class AlamofireBuilder {
 	func getCurrentStatus( completion: @escaping (ApiCallback<CovidModel?>)->() ){
 		af.request("https://api.covidtracking.com/v1/us/daily.json", method: .get).response { data in
 			completion(self.parseData(data: data.data))
+			
 		}
 	}
 	
@@ -21,7 +22,7 @@ class AlamofireBuilder {
 		guard let data = data else {return ApiCallback.failure("Data are nil")}
 		do {
 			let data = try JSONDecoder().decode(Model.self, from: data)
-			print(data)
+			//print(data)
 			return .success(model: data)
 		} catch {
 			print("data erorr \(error)")

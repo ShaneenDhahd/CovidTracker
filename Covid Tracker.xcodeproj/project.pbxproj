@@ -11,9 +11,10 @@
 		0A1DE874291568160056CC9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE873291568160056CC9B /* SceneDelegate.swift */; };
 		0A1DE876291568160056CC9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE875291568160056CC9B /* ViewController.swift */; };
 		0A1DE879291568160056CC9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE877291568160056CC9B /* Main.storyboard */; };
-		0A1DE87C291568160056CC9B /* Covid_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE87A291568160056CC9B /* Covid_Tracker.xcdatamodeld */; };
 		0A1DE87E291568180056CC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE87D291568180056CC9B /* Assets.xcassets */; };
 		0A1DE881291568180056CC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE87F291568180056CC9B /* LaunchScreen.storyboard */; };
+		0AAA689029185F0A0009AE37 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0AAA688F29185F0A0009AE37 /* RealmSwift */; };
+		0AAA689229185F280009AE37 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0AAA689129185F280009AE37 /* Realm */; };
 		0ABD53D32915924E00F646C0 /* CovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD53D12915924E00F646C0 /* CovidCell.swift */; };
 		0ABD53D42915924E00F646C0 /* CovidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD53D22915924E00F646C0 /* CovidCell.xib */; };
 		0ABD53D7291664FC00F646C0 /* AlamofireBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD53D6291664FC00F646C0 /* AlamofireBuilder.swift */; };
@@ -22,6 +23,7 @@
 		0ABD53F2291696C000F646C0 /* CovidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD53F1291696C000F646C0 /* CovidViewModel.swift */; };
 		0ABD53F429169B8500F646C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABD53F329169B8500F646C0 /* Alamofire */; };
 		0ABD53F929169E3E00F646C0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD53F829169E3E00F646C0 /* UIViewController+Extensions.swift */; };
+		0AE3F7932918580200DB4F3C /* CovidRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7922918580200DB4F3C /* CovidRealmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,6 @@
 		0A1DE873291568160056CC9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A1DE875291568160056CC9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A1DE878291568160056CC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0A1DE87B291568160056CC9B /* Covid_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Covid_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		0A1DE87D291568180056CC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A1DE880291568180056CC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1DE882291568180056CC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +44,8 @@
 		0ABD53EE2916960800F646C0 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		0ABD53F1291696C000F646C0 /* CovidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewModel.swift; sourceTree = "<group>"; };
 		0ABD53F829169E3E00F646C0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0AE3F7922918580200DB4F3C /* CovidRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidRealmModel.swift; sourceTree = "<group>"; };
+		0AE3F79429185B2E00DB4F3C /* realm-swift-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "realm-swift-master"; path = "../../../Downloads/realm-swift-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAA689229185F280009AE37 /* Realm in Frameworks */,
+				0AAA689029185F0A0009AE37 /* RealmSwift in Frameworks */,
 				0ABD53F429169B8500F646C0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +95,6 @@
 				0A1DE87D291568180056CC9B /* Assets.xcassets */,
 				0A1DE87F291568180056CC9B /* LaunchScreen.storyboard */,
 				0A1DE882291568180056CC9B /* Info.plist */,
-				0A1DE87A291568160056CC9B /* Covid_Tracker.xcdatamodeld */,
 			);
 			path = "Covid Tracker";
 			sourceTree = "<group>";
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0ABD53D929166EAD00F646C0 /* Alamofire-master */,
+				0AE3F79429185B2E00DB4F3C /* realm-swift-master */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		0ABD53ED291695FE00F646C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0AE3F7922918580200DB4F3C /* CovidRealmModel.swift */,
 				0ABD53EE2916960800F646C0 /* CovidModel.swift */,
 			);
 			path = Model;
@@ -171,6 +177,8 @@
 			name = "Covid Tracker";
 			packageProductDependencies = (
 				0ABD53F329169B8500F646C0 /* Alamofire */,
+				0AAA688F29185F0A0009AE37 /* RealmSwift */,
+				0AAA689129185F280009AE37 /* Realm */,
 			);
 			productName = "Covid Tracker";
 			productReference = 0A1DE86E291568160056CC9B /* Covid Tracker.app */;
@@ -228,13 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE3F7932918580200DB4F3C /* CovidRealmModel.swift in Sources */,
 				0A1DE876291568160056CC9B /* ViewController.swift in Sources */,
 				0ABD53EF2916960800F646C0 /* CovidModel.swift in Sources */,
 				0ABD53F929169E3E00F646C0 /* UIViewController+Extensions.swift in Sources */,
 				0ABD53D32915924E00F646C0 /* CovidCell.swift in Sources */,
 				0ABD53F2291696C000F646C0 /* CovidViewModel.swift in Sources */,
 				0A1DE872291568160056CC9B /* AppDelegate.swift in Sources */,
-				0A1DE87C291568160056CC9B /* Covid_Tracker.xcdatamodeld in Sources */,
 				0ABD53D7291664FC00F646C0 /* AlamofireBuilder.swift in Sources */,
 				0A1DE874291568160056CC9B /* SceneDelegate.swift in Sources */,
 				0ABD53EC29166F7A00F646C0 /* ApiCallBack.swift in Sources */,
@@ -467,24 +475,19 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0AAA688F29185F0A0009AE37 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealmSwift;
+		};
+		0AAA689129185F280009AE37 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realm;
+		};
 		0ABD53F329169B8500F646C0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		0A1DE87A291568160056CC9B /* Covid_Tracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0A1DE87B291568160056CC9B /* Covid_Tracker.xcdatamodel */,
-			);
-			currentVersion = 0A1DE87B291568160056CC9B /* Covid_Tracker.xcdatamodel */;
-			path = Covid_Tracker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0A1DE866291568160056CC9B /* Project object */;
 }

@@ -15,7 +15,23 @@ struct CovidModelElement: Codable {
 	let totalTestResults: Int
 	let total, posNeg, deathIncrease, hospitalizedIncrease: Int
 	let negativeIncrease, positiveIncrease, totalTestResultsIncrease: Int
-	let hash: String
+	
+//	init(date: Int, states: Int, positive: Int?, negative: Int?, pending: Int?, death: Int?, totalTestResults: Int, total: Int, posNeg: Int, deathIncrease: Int, hospitalizedIncrease: Int, negativeIncrease: Int, positiveIncrease: Int, totalTestResultsIncrease: Int) {
+//		self.date = date
+//		self.states = states
+//		self.positive = positive
+//		self.negative = negative
+//		self.pending = pending
+//		self.death = death
+//		self.totalTestResults = totalTestResults
+//		self.total = total
+//		self.posNeg = posNeg
+//		self.deathIncrease = deathIncrease
+//		self.hospitalizedIncrease = hospitalizedIncrease
+//		self.negativeIncrease = negativeIncrease
+//		self.positiveIncrease = positiveIncrease
+//		self.totalTestResultsIncrease = totalTestResultsIncrease
+//	}
 }
 
 typealias CovidModel = [CovidModelElement]

@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import UIKit
+import RealmSwift
 
 class CovidViewModel {
 	
+	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 	var datas: CovidModel = CovidModel()
 	var reloadTableView: (()->())?
 	var showError: (()->())?
@@ -28,26 +32,49 @@ class CovidViewModel {
 			switch(response){
 				case .success(let model):
 					if let model = model {
-						self.createCell(datas: model)
+						let covidList = model.prefix(upTo: 10)
+						self.createCell(datas: Array(covidList))
+						self.storeData()
 						self.reloadTableView?()
 					}
 				case .failure(_):
-					self.showError?()
+					self.retriveData()
+					//self.showError?()
 			}
 		}
-//		Alamo.getDataFromServer { (success, data) in
-//			self.hideLoading?()
-//			if success {
-//				self.createCell(datas: data!)
-//				self.reloadTableView?()
-//			} else {
-//				self.showError?()
-//			}
-//		}
 	}
+	
+	private func storeData(){
+		let realm = try! Realm()
+		try! realm.write({
+			realm.deleteAll()
+			let covidRealm = CovidRealmModel()
+			covidRealm.covidModel = items
+			realm.add(covidRealm)
+			print("realmData 1 \((covidRealm.covidModel?.last?.positive)!)")
+		})
+	
+	}
+	
+	private func retriveData(){
+		let realm = try! Realm()
+		let realmData = realm.object(ofType: CovidRealmModel.self, forPrimaryKey: "CovidRealm")
+		print("realmData 2 \(realmData!.covidModel?.first?.positive)")
+		if let covidList = realmData?.covidModel {
+			self.createCell(datas: covidList)
+			self.reloadTableView?()
+		} else {
+			
+		}
+	}
+	
 	
 	var numberOfCells: Int {
 		return cellViewModels.count
+	}
+	
+	var items: [CovidModelElement]? {
+		return cellViewModels
 	}
 	
 	func getCellViewModel( at indexPath: IndexPath ) -> CovidModelElement {
