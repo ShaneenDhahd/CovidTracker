@@ -11,7 +11,7 @@ import RealmSwift
 
 class HomeViewModel {
 	
-	var errorMsg = "Looks like you are offline. Don't worry enjoy"
+	var errorMsg = "Something went wrong, Please try again later!"
 
 	var homeCovidData: CovidModelElement! = CovidModel().first  {
 		didSet {
@@ -60,9 +60,9 @@ class HomeViewModel {
 		let realmData = realm.object(ofType: HomeCovidRealmModel.self, forPrimaryKey: "HomeCovidRealm")
 		print("realmData 2 \(realmData?.covidModel)")
 		if let covidData = realmData?.covidModel {
+			errorMsg = "Looks like you are offline. Don't worry enjoy"
 			homeCovidData = covidData
 		} else {
-			
 		}
 	}
 	private func clearCache(_ realm: Realm) {

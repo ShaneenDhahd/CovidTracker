@@ -114,7 +114,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44y-TY-iGo">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44y-TY-iGo">
                                 <rect key="frame" x="30" y="604.33333333333337" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fwd-dw-bDW"/>
@@ -195,6 +195,7 @@
                         <outlet property="hospitalized" destination="g9b-rP-Ylq" id="rvE-nj-mHB"/>
                         <outlet property="infected" destination="nUg-HR-dcX" id="5xs-NL-ojk"/>
                         <outlet property="negative" destination="5Qe-Pw-1T5" id="dn5-fN-z1W"/>
+                        <outlet property="pastCasesBtn" destination="44y-TY-iGo" id="z2q-jg-B6D"/>
                         <outlet property="pieView" destination="p2U-jW-hCh" id="LHK-Wr-diG"/>
                     </connections>
                 </viewController>

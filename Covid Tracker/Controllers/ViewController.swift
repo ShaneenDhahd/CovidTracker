@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 class ViewController: UIViewController {
 	
+	@IBOutlet var pastCasesBtn: UIButton!
 	@IBOutlet var hospitalized: UILabel!
 	@IBOutlet var deaths: UILabel!
 	@IBOutlet var negative: UILabel!
@@ -58,6 +59,9 @@ class ViewController: UIViewController {
 		if let deathNumber = data.positive {
 			deaths.text = "\(deathNumber)"
 		}
+		if data != nil {
+			pastCasesBtn.isEnabled = true
+		}
 	}
 	
 	
@@ -95,6 +99,7 @@ class ViewController: UIViewController {
 		viewModel.hideLoading = {
 			DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
 		}
+		errorMsg = viewModel.errorMsg
 		viewModel.getData()
 		covidViewModel.getData()
 	}
