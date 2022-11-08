@@ -69,7 +69,6 @@ extension RecordsViewController:UITableViewDelegate, UITableViewDataSource {
 		}
 		let cellItem = viewModel.getCellViewModel( at: indexPath )
 		cell.initCell(cellItem)
-		//cell.neg.text = ("\(cellVM.positive)")
 		return cell
 	}
 	

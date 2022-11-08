@@ -32,10 +32,8 @@ class AlamofireBuilder {
 		guard let data = data else {return ApiCallback.failure("Data are nil")}
 		do {
 			let data = try JSONDecoder().decode(Model.self, from: data)
-			print(data)
 			return .success(model: data)
 		} catch {
-			print("data erorr \(error)")
 			return .failure(error.localizedDescription)
 		}
 	}

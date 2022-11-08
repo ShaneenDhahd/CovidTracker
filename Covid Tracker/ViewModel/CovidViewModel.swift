@@ -30,7 +30,6 @@ class CovidViewModel {
 			self.hideLoading?()
 			switch(response){
 				case .success(let model):
-					print("call succeeded")
 					if let model = model {
 						let covidList = model.prefix(upTo: 10)
 						self.createCell(datas: Array(covidList))
@@ -38,7 +37,6 @@ class CovidViewModel {
 						self.reloadTableView?()
 					}
 				case .failure(_):
-					print("call failed")
 					self.retriveData()
 					//self.showError?()
 			}
@@ -53,7 +51,6 @@ class CovidViewModel {
 			let covidRealm = CovidRealmModel()
 			covidRealm.covidModel = items
 			realm.add(covidRealm)
-			print("realmData 1 \((covidRealm.covidModel?.last?.positive)!)")
 		})
 	
 	}

@@ -29,14 +29,11 @@ class HomeViewModel {
 			self.hideLoading?()
 			switch(response){
 				case .success(let model):
-					print("call succeeded")
-
-					if let data = model?.first, let model = model {
+					if let data = model?.first {
 						self.homeCovidData = data
 						self.storeData()
 					}
 				case .failure(_):
-					print("call failer")
 					self.retriveData()
 					self.showError?()
 
@@ -51,14 +48,12 @@ class HomeViewModel {
 			let covidRealm = HomeCovidRealmModel()
 			covidRealm.covidModel = homeCovidData
 			realm.add(covidRealm)
-			print("realmData 1 \((covidRealm.covidModel?.positive)!)")
 		})
 	}
 	
 	private func retriveData(){
 		let realm = try! Realm()
 		let realmData = realm.object(ofType: HomeCovidRealmModel.self, forPrimaryKey: "HomeCovidRealm")
-		print("realmData 2 \(realmData?.covidModel)")
 		if let covidData = realmData?.covidModel {
 			errorMsg = "Looks like you are offline. Don't worry enjoy"
 			homeCovidData = covidData

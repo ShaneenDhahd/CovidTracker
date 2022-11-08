@@ -24,8 +24,6 @@ class ViewController: UIViewController {
 	var covidViewModel = CovidViewModel()
 
 	var errorMsg = ""
-	//var list = CovidModel()
-	
 
 	@IBOutlet var activityIndicator: UIActivityIndicatorView!
 	
@@ -83,11 +81,6 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	//		tableView.delegate = self
-	//		tableView.dataSource = self
-	//		tableView.register(UINib(nibName: "CovidCell", bundle: nil), forCellReuseIdentifier: "customTableViewCell")
-	
-	
 	func initViewModel(){
 		
 		viewModel.showError = {
@@ -104,21 +97,3 @@ class ViewController: UIViewController {
 		covidViewModel.getData()
 	}
 }
-//
-//
-//extension ViewController:UITableViewDelegate, UITableViewDataSource {
-//	
-//	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//		return viewModel.items?.count ?? 0
-//	}
-//	
-//	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//		guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CovidCell else {
-//			fatalError("Cell not exists in storyboard")
-//		}
-//		let cellVM = viewModel.getCellViewModel( at: indexPath )
-//		cell.neg.text = ("\(cellVM.positive)")
-//		return cell
-//	}
-//}
-//
