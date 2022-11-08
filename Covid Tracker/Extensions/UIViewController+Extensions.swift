@@ -20,6 +20,7 @@ extension Int? {
 	}
 }
 
+
 extension Int {
 	func format() -> String? {
 		let numberFormatter = NumberFormatter.toOneDecimalPlace
@@ -28,9 +29,7 @@ extension Int {
 		numberFormatter.numberStyle = .decimal
 		return numberFormatter.string(from: self as NSNumber)
 	}
-}
-
-extension Int {
+	
 	func dateFormat() -> String? {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "yyyyMMdd"

@@ -38,7 +38,6 @@ class CovidViewModel {
 					}
 				case .failure(_):
 					self.retriveData()
-					//self.showError?()
 			}
 		}
 	}
