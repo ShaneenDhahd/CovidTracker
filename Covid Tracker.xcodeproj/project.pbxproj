@@ -13,6 +13,7 @@
 		0A1DE879291568160056CC9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE877291568160056CC9B /* Main.storyboard */; };
 		0A1DE87E291568180056CC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE87D291568180056CC9B /* Assets.xcassets */; };
 		0A1DE881291568180056CC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE87F291568180056CC9B /* LaunchScreen.storyboard */; };
+		0A388151291B232500F28E5A /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A388150291B232500F28E5A /* EndPoints.swift */; };
 		0A4A14EA291AAAD9000A686E /* lexend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A8CC9A6291A9F820099AF24 /* lexend.ttf */; };
 		0A4A14ED291AEDE7000A686E /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A14EC291AEDE7000A686E /* RecordsViewController.swift */; };
 		0A8CC9A2291A9ACD0099AF24 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CC9A1291A9ACD0099AF24 /* HomeViewModel.swift */; };
@@ -53,6 +54,7 @@
 		0A1DE87D291568180056CC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A1DE880291568180056CC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1DE882291568180056CC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A388150291B232500F28E5A /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		0A4A14EC291AEDE7000A686E /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		0A8CC9A1291A9ACD0099AF24 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0A8CC9A3291A9CBA0099AF24 /* HomeCovidRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCovidRealmModel.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				0ABD53D6291664FC00F646C0 /* AlamofireBuilder.swift */,
 				0ABD53EB29166F7A00F646C0 /* ApiCallBack.swift */,
+				0A388150291B232500F28E5A /* EndPoints.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE3F7932918580200DB4F3C /* CovidRealmModel.swift in Sources */,
+				0A388151291B232500F28E5A /* EndPoints.swift in Sources */,
 				0A1DE876291568160056CC9B /* ViewController.swift in Sources */,
 				0ABD53EF2916960800F646C0 /* CovidModel.swift in Sources */,
 				0ABD53F929169E3E00F646C0 /* UIViewController+Extensions.swift in Sources */,

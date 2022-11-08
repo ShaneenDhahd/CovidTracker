@@ -12,19 +12,22 @@ class AlamofireBuilder {
 	private let af = Alamofire.AF
 	
 	func getCurrentStatus( completion: @escaping (ApiCallback<CovidModel?>)->() ){
-		af.request("https://api.covidtracking.com/v1/us/current.json", method: .get, requestModifier: { request in
-			request.cachePolicy = .reloadIgnoringCacheData
-		}).response { data in
-			completion(self.parseData(data: data.data))
-			
+		makeRequest(url: .currentStatus) { data in
+			completion(self.parseData(data: data))
 		}
 	}
+	
 	func getDailyStatus( completion: @escaping (ApiCallback<CovidModel?>)->() ){
-		af.request("https://api.covidtracking.com/v1/us/daily.json", method: .get, requestModifier: { request in
+		makeRequest(url: .dailyStatus) { data in
+			completion(self.parseData(data: data))
+		}
+	}
+	
+	private func makeRequest(url: Endpoint, method: HTTPMethod = .get, completion: @escaping (Data?)->()  ){
+		af.request(url.url, method: .get, requestModifier: { request in
 			request.cachePolicy = .reloadIgnoringCacheData
 		}).response { data in
-			completion(self.parseData(data: data.data))
-			
+			completion(data.data)
 		}
 	}
 	
