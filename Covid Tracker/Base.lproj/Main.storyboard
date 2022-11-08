@@ -210,23 +210,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9N9-fS-BE1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tvG-c7-rQt">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-tZ-Fab">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Do-pQ-sey"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="9N9-fS-BE1" firstAttribute="top" secondItem="odu-jH-a2a" secondAttribute="top" id="1cs-Gf-iKi"/>
-                            <constraint firstAttribute="bottom" secondItem="9N9-fS-BE1" secondAttribute="bottom" id="Mp3-Y8-e9u"/>
-                            <constraint firstItem="9N9-fS-BE1" firstAttribute="leading" secondItem="5Do-pQ-sey" secondAttribute="leading" id="QHQ-01-HqU"/>
-                            <constraint firstItem="5Do-pQ-sey" firstAttribute="trailing" secondItem="9N9-fS-BE1" secondAttribute="trailing" id="XTH-9V-27F"/>
+                            <constraint firstItem="5Do-pQ-sey" firstAttribute="trailing" secondItem="tvG-c7-rQt" secondAttribute="trailing" id="3Th-VV-BrU"/>
+                            <constraint firstItem="tvG-c7-rQt" firstAttribute="top" secondItem="odu-jH-a2a" secondAttribute="top" id="C0w-wH-oS8"/>
+                            <constraint firstAttribute="bottom" secondItem="tvG-c7-rQt" secondAttribute="bottom" id="MDZ-3B-mGS"/>
+                            <constraint firstItem="cEa-tZ-Fab" firstAttribute="centerX" secondItem="odu-jH-a2a" secondAttribute="centerX" id="VCG-M5-ote"/>
+                            <constraint firstItem="cEa-tZ-Fab" firstAttribute="centerY" secondItem="odu-jH-a2a" secondAttribute="centerY" id="bbe-xM-3MT"/>
+                            <constraint firstItem="tvG-c7-rQt" firstAttribute="leading" secondItem="5Do-pQ-sey" secondAttribute="leading" id="xzM-8h-l3m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Past Records" id="sz9-g6-dM6"/>
                     <connections>
-                        <outlet property="tableView" destination="9N9-fS-BE1" id="T2C-wu-SjV"/>
+                        <outlet property="loadingIndicator" destination="cEa-tZ-Fab" id="MMa-01-ovX"/>
+                        <outlet property="tableView" destination="tvG-c7-rQt" id="Nc1-ns-G2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYN-ff-Kfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

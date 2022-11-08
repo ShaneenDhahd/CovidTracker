@@ -20,7 +20,8 @@ class ViewController: UIViewController {
 	let pieChartView = PieChartView()
 	
 	var viewModel = HomeViewModel()
-	
+	var covidViewModel = CovidViewModel()
+
 	var errorMsg = ""
 	//var list = CovidModel()
 	
@@ -95,6 +96,7 @@ class ViewController: UIViewController {
 			DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
 		}
 		viewModel.getData()
+		covidViewModel.getData()
 	}
 }
 //

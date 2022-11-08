@@ -87,48 +87,48 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-pH-mNT" userLabel="deathStack">
-                                <rect key="frame" x="228.66666666666666" y="10" width="98.666666666666657" height="49"/>
+                                <rect key="frame" x="228.66666666666663" y="10" width="79" height="42.666666666666664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWD-s2-u3D">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="17.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="17.666666666666668"/>
                                         <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-8K-bim">
-                                        <rect key="frame" x="0.0" y="17.666666666666664" width="98.666666666666671" height="31.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="17.666666666666664" width="79" height="25"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBG-PL-pX3" userLabel="hospitalStack">
-                                <rect key="frame" x="228.66666666666666" y="69" width="98.666666666666657" height="49"/>
+                                <rect key="frame" x="228.66666666666663" y="67.666666666666671" width="88" height="42.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospitalized:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eg-fp-zYb">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="17.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="17.666666666666668"/>
                                         <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-o8-Vz5">
-                                        <rect key="frame" x="0.0" y="17.666666666666671" width="98.666666666666671" height="31.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="17.666666666666657" width="88" height="25"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-vd-cb7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tomb" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-vd-cb7">
                                 <rect key="frame" x="198.66666666666666" y="10" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="iC9-f6-AJM"/>
                                     <constraint firstAttribute="width" constant="20" id="zEY-g1-mhn"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tomb" translatesAutoresizingMaskIntoConstraints="NO" id="ihF-5R-tgm">
-                                <rect key="frame" x="198.66666666666666" y="69" width="20" height="20"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="ihF-5R-tgm">
+                                <rect key="frame" x="198.66666666666666" y="67.666666666666671" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="11e-iz-l9z"/>
                                     <constraint firstAttribute="height" constant="20" id="uCG-eJ-N6S"/>
@@ -137,13 +137,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ihF-5R-tgm" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="10" id="1xe-un-SKE"/>
+                            <constraint firstItem="ihF-5R-tgm" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="15" id="1xe-un-SKE"/>
                             <constraint firstItem="WGp-ly-tgh" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="4Mo-yn-GzF"/>
                             <constraint firstItem="WGp-ly-tgh" firstAttribute="leading" secondItem="Ikb-3H-e94" secondAttribute="trailing" constant="10" id="6Jm-ZB-Lfq"/>
                             <constraint firstItem="htE-wz-ieV" firstAttribute="top" secondItem="WGp-ly-tgh" secondAttribute="bottom" constant="10" id="6Uf-5p-8zF"/>
                             <constraint firstItem="Ikb-3H-e94" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="7KP-EC-JbT"/>
                             <constraint firstItem="Ff7-RZ-5kg" firstAttribute="leading" secondItem="WGp-ly-tgh" secondAttribute="trailing" constant="10" id="8Rd-7d-Ykc"/>
-                            <constraint firstItem="gBG-PL-pX3" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="10" id="B3L-xz-8e0"/>
+                            <constraint firstItem="gBG-PL-pX3" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="15" id="B3L-xz-8e0"/>
                             <constraint firstItem="BXm-pj-vKR" firstAttribute="leading" secondItem="0LG-tV-pHM" secondAttribute="leading" constant="10" id="Bm4-3M-KFL"/>
                             <constraint firstItem="Ikb-3H-e94" firstAttribute="leading" secondItem="0LG-tV-pHM" secondAttribute="leading" constant="10" id="Cqg-lv-KLB"/>
                             <constraint firstItem="YPW-pH-mNT" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="Hse-pq-9R5"/>

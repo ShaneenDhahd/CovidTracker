@@ -9,6 +9,7 @@ import UIKit
 
 class RecordsViewController: UIViewController {
 
+	@IBOutlet var loadingIndicator: UIActivityIndicatorView!
 	@IBOutlet var tableView: UITableView!
 	
 	var viewModel = CovidViewModel()
@@ -36,12 +37,12 @@ class RecordsViewController: UIViewController {
 		viewModel.showError = {
 			DispatchQueue.main.async { self.showAlert("Ups, something went wrong.") }
 		}
-//		viewModel.showLoading = {
-//			DispatchQueue.main.async { self.activityIndicator.startAnimating() }
-//		}
-//		viewModel.hideLoading = {
-//			DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
-//		}
+		viewModel.showLoading = {
+			DispatchQueue.main.async { self.loadingIndicator.startAnimating() }
+		}
+		viewModel.hideLoading = {
+			DispatchQueue.main.async { self.loadingIndicator.stopAnimating() }
+		}
 		viewModel.getData()
 	}
     /*
