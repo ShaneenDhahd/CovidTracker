@@ -19,3 +19,13 @@ extension Int? {
 		}
 	}
 }
+
+extension Int {
+	func format() -> String? {
+		let numberFormatter = NumberFormatter.toOneDecimalPlace
+		numberFormatter.locale = NSLocale(localeIdentifier: "EN") as Locale?
+		numberFormatter.groupingSeparator = "."
+		numberFormatter.numberStyle = .decimal
+		return numberFormatter.string(from: self as NSNumber)
+	}
+}

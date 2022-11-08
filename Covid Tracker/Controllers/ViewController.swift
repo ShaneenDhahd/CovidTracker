@@ -45,16 +45,16 @@ class ViewController: UIViewController {
 	
 	private func initViews() {
 
-		if let infectedNumber = data.positive {
+		if let infectedNumber = data.positive?.format() {
 			infected.text = "\(infectedNumber)"
 		}
-		if let negativeNumber = data.positive {
+		if let negativeNumber = data.negative?.format() {
 			negative.text = "\(negativeNumber)"
 		}
-		if let hospitalNumber = data.positive {
+		if let hospitalNumber = data.hospitalized?.format() {
 			hospitalized.text = "\(hospitalNumber)"
 		}
-		if let deathNumber = data.positive {
+		if let deathNumber = data.death?.format() {
 			deaths.text = "\(deathNumber)"
 		}
 		if data != nil {

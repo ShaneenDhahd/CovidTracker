@@ -22,16 +22,16 @@ class CovidCell: UITableViewCell {
     }
 
 	func initCell(_ data: CovidModelElement) {
-		if let positive = data.positive {
+		if let positive = data.positive?.format() {
 			infectedLabel.text = "\(positive)"
 		}
-		if let negative = data.negative {
+		if let negative = data.negative?.format() {
 			negativeLabel.text = "\(negative)"
 		}
-		if let hospital = data.hospitalized {
+		if let hospital = data.hospitalized?.format() {
 			hospitalLabel.text = "\(hospital)"
 		}
-		if let death = data.death {
+		if let death = data.death?.format() {
 			deathLabel.text = "\(death)"
 		}
 	}
