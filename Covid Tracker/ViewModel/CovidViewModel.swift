@@ -11,8 +11,7 @@ import RealmSwift
 
 class CovidViewModel {
 	
-	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+	
 	var datas: CovidModel = CovidModel()
 	var reloadTableView: (()->())?
 	var showError: (()->())?
@@ -27,10 +26,11 @@ class CovidViewModel {
 	
 	func getData(){
 		showLoading?()
-		AlamofireBuilder().getCurrentStatus { response in
+		AlamofireBuilder().getDailyStatus { response in
 			self.hideLoading?()
 			switch(response){
 				case .success(let model):
+					print("call succeeded")
 					if let model = model {
 						let covidList = model.prefix(upTo: 10)
 						self.createCell(datas: Array(covidList))
@@ -38,6 +38,7 @@ class CovidViewModel {
 						self.reloadTableView?()
 					}
 				case .failure(_):
+					print("call failed")
 					self.retriveData()
 					//self.showError?()
 			}
@@ -46,8 +47,9 @@ class CovidViewModel {
 	
 	private func storeData(){
 		let realm = try! Realm()
+		
 		try! realm.write({
-			realm.deleteAll()
+			clearCache(realm)
 			let covidRealm = CovidRealmModel()
 			covidRealm.covidModel = items
 			realm.add(covidRealm)
@@ -59,7 +61,6 @@ class CovidViewModel {
 	private func retriveData(){
 		let realm = try! Realm()
 		let realmData = realm.object(ofType: CovidRealmModel.self, forPrimaryKey: "CovidRealm")
-		print("realmData 2 \(realmData!.covidModel?.first?.positive)")
 		if let covidList = realmData?.covidModel {
 			self.createCell(datas: covidList)
 			self.reloadTableView?()
@@ -68,6 +69,12 @@ class CovidViewModel {
 		}
 	}
 	
+	private func clearCache(_ realm: Realm) {
+		let covidRealmObject = realm.object(ofType: CovidRealmModel.self, forPrimaryKey: "CovidRealm")
+		if let covidRealmObject = covidRealmObject {
+			realm.delete(covidRealmObject.self)
+		}
+	}
 	
 	var numberOfCells: Int {
 		return cellViewModels.count

@@ -9,11 +9,32 @@ import UIKit
 
 class CovidCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet var hospitalLabel: UILabel!
+	@IBOutlet var deathLabel: UILabel!
+	@IBOutlet var negativeLabel: UILabel!
+	@IBOutlet var infectedLabel: UILabel!
+	@IBOutlet var covidContentView: UIView!
+	override func awakeFromNib() {
         super.awakeFromNib()
+		
+		contentView.layer.cornerRadius = 15
         // Initialization code
     }
 
+	func initCell(_ data: CovidModelElement) {
+		if let positive = data.positive {
+			infectedLabel.text = "\(positive)"
+		}
+		if let negative = data.negative {
+			negativeLabel.text = "\(negative)"
+		}
+		if let hospital = data.hospitalized {
+			hospitalLabel.text = "\(hospital)"
+		}
+		if let death = data.death {
+			deathLabel.text = "\(death)"
+		}
+	}
 	@IBOutlet var neg: UILabel!
 	override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

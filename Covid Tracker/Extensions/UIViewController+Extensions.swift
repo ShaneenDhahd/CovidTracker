@@ -8,3 +8,14 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+extension Int? {
+	func getPercentage(of total: Int) -> CGFloat {
+		if let current = self {
+			let percentage = (CGFloat(current) / CGFloat(total)) * 100
+			return CGFloat(percentage)
+		} else {
+			return 0
+		}
+	}
+}

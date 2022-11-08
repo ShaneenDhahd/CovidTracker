@@ -5,37 +5,197 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="lexend.ttf">
+            <string>LexendDeca-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customTableViewCell" rowHeight="151" id="KGk-i7-Jjw" customClass="CovidCell" customModule="Covid_Tracker" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="473" height="151"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="covidCell" rowHeight="161" id="KGk-i7-Jjw" customClass="CovidCell" customModule="Covid_Tracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="161"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="473" height="151"/>
+                <rect key="frame" x="0.0" y="0.0" width="425" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n85-Q6-weW">
-                        <rect key="frame" x="30" y="21" width="413" height="109"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LG-tV-pHM">
+                        <rect key="frame" x="10" y="10" width="405" height="141"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_dot" translatesAutoresizingMaskIntoConstraints="NO" id="Ikb-3H-e94">
+                                <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="B3y-L5-4yG"/>
+                                    <constraint firstAttribute="height" constant="20" id="zvb-gr-02G"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WGp-ly-tgh" userLabel="infectedStack">
+                                <rect key="frame" x="40.000000000000007" y="10" width="98.666666666666686" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infected:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMX-b3-dkU">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="17.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd9-T5-WcW">
+                                        <rect key="frame" x="0.0" y="17.666666666666664" width="98.666666666666671" height="31.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="htE-wz-ieV" userLabel="posStack">
+                                <rect key="frame" x="40" y="69" width="79" height="42.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negative:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-3e-B4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="17.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-oN-B6b">
+                                        <rect key="frame" x="0.0" y="17.666666666666671" width="79" height="25"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="BXm-pj-vKR">
+                                <rect key="frame" x="10" y="69" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="hw5-km-gGZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="tbm-Dw-161"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-03-07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8V-K4-wTg">
+                                <rect key="frame" x="10.000000000000004" y="119.66666666666666" width="63.333333333333343" height="15"/>
+                                <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-RZ-5kg">
+                                <rect key="frame" x="148.66666666666666" y="0.0" width="40" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9WM-wE-One"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-pH-mNT" userLabel="deathStack">
+                                <rect key="frame" x="228.66666666666666" y="10" width="98.666666666666657" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWD-s2-u3D">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="17.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-8K-bim">
+                                        <rect key="frame" x="0.0" y="17.666666666666664" width="98.666666666666671" height="31.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBG-PL-pX3" userLabel="hospitalStack">
+                                <rect key="frame" x="228.66666666666666" y="69" width="98.666666666666657" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospitalized:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eg-fp-zYb">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="17.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3275894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-o8-Vz5">
+                                        <rect key="frame" x="0.0" y="17.666666666666671" width="98.666666666666671" height="31.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-vd-cb7">
+                                <rect key="frame" x="198.66666666666666" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="iC9-f6-AJM"/>
+                                    <constraint firstAttribute="width" constant="20" id="zEY-g1-mhn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tomb" translatesAutoresizingMaskIntoConstraints="NO" id="ihF-5R-tgm">
+                                <rect key="frame" x="198.66666666666666" y="69" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="11e-iz-l9z"/>
+                                    <constraint firstAttribute="height" constant="20" id="uCG-eJ-N6S"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ihF-5R-tgm" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="10" id="1xe-un-SKE"/>
+                            <constraint firstItem="WGp-ly-tgh" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="4Mo-yn-GzF"/>
+                            <constraint firstItem="WGp-ly-tgh" firstAttribute="leading" secondItem="Ikb-3H-e94" secondAttribute="trailing" constant="10" id="6Jm-ZB-Lfq"/>
+                            <constraint firstItem="htE-wz-ieV" firstAttribute="top" secondItem="WGp-ly-tgh" secondAttribute="bottom" constant="10" id="6Uf-5p-8zF"/>
+                            <constraint firstItem="Ikb-3H-e94" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="7KP-EC-JbT"/>
+                            <constraint firstItem="Ff7-RZ-5kg" firstAttribute="leading" secondItem="WGp-ly-tgh" secondAttribute="trailing" constant="10" id="8Rd-7d-Ykc"/>
+                            <constraint firstItem="gBG-PL-pX3" firstAttribute="top" secondItem="YPW-pH-mNT" secondAttribute="bottom" constant="10" id="B3L-xz-8e0"/>
+                            <constraint firstItem="BXm-pj-vKR" firstAttribute="leading" secondItem="0LG-tV-pHM" secondAttribute="leading" constant="10" id="Bm4-3M-KFL"/>
+                            <constraint firstItem="Ikb-3H-e94" firstAttribute="leading" secondItem="0LG-tV-pHM" secondAttribute="leading" constant="10" id="Cqg-lv-KLB"/>
+                            <constraint firstItem="YPW-pH-mNT" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="Hse-pq-9R5"/>
+                            <constraint firstItem="Ff7-RZ-5kg" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" id="Yrd-ZB-0VH"/>
+                            <constraint firstItem="htE-wz-ieV" firstAttribute="leading" secondItem="BXm-pj-vKR" secondAttribute="trailing" constant="10" id="b6j-ZZ-Rxb"/>
+                            <constraint firstItem="u8V-K4-wTg" firstAttribute="leading" secondItem="0LG-tV-pHM" secondAttribute="leading" constant="10" id="bsR-HF-7r3"/>
+                            <constraint firstItem="gBG-PL-pX3" firstAttribute="leading" secondItem="ihF-5R-tgm" secondAttribute="trailing" constant="10" id="dpk-cd-g93"/>
+                            <constraint firstItem="2q5-vd-cb7" firstAttribute="leading" secondItem="Ff7-RZ-5kg" secondAttribute="trailing" constant="10" id="i3E-re-cy5"/>
+                            <constraint firstItem="2q5-vd-cb7" firstAttribute="top" secondItem="0LG-tV-pHM" secondAttribute="top" constant="10" id="kah-y4-7md"/>
+                            <constraint firstItem="u8V-K4-wTg" firstAttribute="top" secondItem="htE-wz-ieV" secondAttribute="bottom" constant="8" symbolic="YES" id="ojw-78-Z5g"/>
+                            <constraint firstAttribute="bottom" secondItem="Ff7-RZ-5kg" secondAttribute="bottom" id="ori-7d-jxT"/>
+                            <constraint firstItem="BXm-pj-vKR" firstAttribute="top" secondItem="WGp-ly-tgh" secondAttribute="bottom" constant="10" id="vDz-js-efx"/>
+                            <constraint firstItem="YPW-pH-mNT" firstAttribute="leading" secondItem="2q5-vd-cb7" secondAttribute="trailing" constant="10" id="w2e-dm-j2q"/>
+                            <constraint firstItem="ihF-5R-tgm" firstAttribute="leading" secondItem="Ff7-RZ-5kg" secondAttribute="trailing" constant="10" id="x9o-mE-rgc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="n85-Q6-weW" secondAttribute="bottom" constant="10" id="9Eu-Yi-R2U"/>
-                    <constraint firstItem="n85-Q6-weW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="bLc-oq-5wA"/>
-                    <constraint firstItem="n85-Q6-weW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="bqo-YU-kmI"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="n85-Q6-weW" secondAttribute="trailing" constant="10" id="nLV-n7-evo"/>
+                    <constraint firstAttribute="trailing" secondItem="0LG-tV-pHM" secondAttribute="trailing" constant="10" id="2aj-Mg-G0T"/>
+                    <constraint firstAttribute="bottom" secondItem="0LG-tV-pHM" secondAttribute="bottom" constant="10" id="Xld-Oj-YeH"/>
+                    <constraint firstItem="0LG-tV-pHM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ljY-OC-ZUa"/>
+                    <constraint firstItem="0LG-tV-pHM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pxG-A6-yFU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
-                <outlet property="neg" destination="n85-Q6-weW" id="UlL-IZ-AQC"/>
+                <outlet property="covidContentView" destination="H2p-sc-9uM" id="7KH-mk-tci"/>
+                <outlet property="deathLabel" destination="RIM-8K-bim" id="BTo-Lv-H7Z"/>
+                <outlet property="hospitalLabel" destination="nC6-o8-Vz5" id="J3c-vt-IEi"/>
+                <outlet property="infectedLabel" destination="kd9-T5-WcW" id="BIb-mr-ulJ"/>
+                <outlet property="negativeLabel" destination="aDm-oN-B6b" id="NCB-l9-Qpn"/>
             </connections>
-            <point key="canvasLocation" x="248.46153846153845" y="26.658767772511847"/>
+            <point key="canvasLocation" x="211.53846153846152" y="30.213270142180093"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="green_dot" width="14" height="14"/>
+        <image name="hospital" width="22" height="22"/>
+        <image name="red_dot" width="14" height="14"/>
+        <image name="tomb" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
