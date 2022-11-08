@@ -29,3 +29,14 @@ extension Int {
 		return numberFormatter.string(from: self as NSNumber)
 	}
 }
+
+extension Int {
+	func dateFormat() -> String? {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyyMMdd"
+		guard let date = dateFormatter.date(from: "\(self)") else { return "" }
+		dateFormatter.dateFormat = "yyyy-MM-dd"
+		dateFormatter.locale = Locale(identifier: "EN")
+		return dateFormatter.string(from: date)
+	}
+}

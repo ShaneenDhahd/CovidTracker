@@ -9,6 +9,7 @@ import UIKit
 
 class CovidCell: UITableViewCell {
 
+	@IBOutlet var dateLabel: UILabel!
 	@IBOutlet var hospitalLabel: UILabel!
 	@IBOutlet var deathLabel: UILabel!
 	@IBOutlet var negativeLabel: UILabel!
@@ -33,6 +34,9 @@ class CovidCell: UITableViewCell {
 		}
 		if let death = data.death?.format() {
 			deathLabel.text = "\(death)"
+		}
+		if let date = data.date.dateFormat() {
+			dateLabel.text = "\(date)"
 		}
 	}
 	@IBOutlet var neg: UILabel!

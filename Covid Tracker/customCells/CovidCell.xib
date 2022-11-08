@@ -175,6 +175,7 @@
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
                 <outlet property="covidContentView" destination="H2p-sc-9uM" id="7KH-mk-tci"/>
+                <outlet property="dateLabel" destination="u8V-K4-wTg" id="H5M-PI-MS2"/>
                 <outlet property="deathLabel" destination="RIM-8K-bim" id="BTo-Lv-H7Z"/>
                 <outlet property="hospitalLabel" destination="nC6-o8-Vz5" id="J3c-vt-IEi"/>
                 <outlet property="infectedLabel" destination="kd9-T5-WcW" id="BIb-mr-ulJ"/>
